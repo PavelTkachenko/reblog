@@ -1,13 +1,27 @@
 import React from 'react';
-import Image from './Image.jsx'
-import TextBox from './TextBox.jsx'
+import Image from './Image.jsx';
+import MetaBlock from './MetaBlock.jsx';
 
-const BlogItem = ({image, text}) => (
+const BlogItem = ({text, image, meta}) => (
   <div>
     <Image {...image} />
     <br/>
-    <TextBox>{text}</TextBox>
+    <span>{text}</span>
+    <MetaBlock {...meta}/>
+    <hr/>
   </div>
 );
+
+BlogItem.propTypes = {
+  text: PropTypes.string,
+  image: PropTypes.object,
+  meta: PropTypes.object
+};
+
+BlogItem.defaultProps = {
+  text: 'Text is not provided',
+  image: { src: 'images/empty_photo.jpg', alt: 'Empty photo'
+};
+
 
 export default BlogItem;
