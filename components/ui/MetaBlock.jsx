@@ -1,11 +1,9 @@
 import React from 'react';
 import moment from 'moment';
-import Like from './Like.jsx';
 
 const MetaBlock = ({created_at, updated_at, author}) => (
   <small>
     <ul>
-      <li><Like /></li>
       <li>Author: {author}</li>
       <li>Created at: {moment(created_at).fromNow()}</li>
       <li>Updated at: {moment(updated_at).fromNow()}</li>

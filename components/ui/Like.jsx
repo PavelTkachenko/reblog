@@ -1,31 +1,17 @@
 import React from 'react';
 
-class Like extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { count: props.count };
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  render() {
-    return (
-      <button onClick={this.handleClick}>
-        Like! ({this.state.count})
-      </button>
-    );
-  }
-
-  handleClick(e) {
-    this.setState({ count: this.state.count + 1 });
-  }
-}
+const Like = ({likes, like, id}) => (
+  <button onClick={(e) => like(id)}>Like! ({likes})</button>
+);
 
 Like.propTypes = {
-  count: PropTypes.number
+  likes: PropTypes.number,
+  id: PropTypes.number.isRequired,
+  like: PropTypes.func.isRequired
 };
 
 Like.defaultProps = {
-  count: 0
+  likes: 0
 };
 
 export default Like;
