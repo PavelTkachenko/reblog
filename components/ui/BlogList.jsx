@@ -1,33 +1,15 @@
 import React from 'react';
 import BlogItem from './BlogItem.jsx'
 
-const BlogList = ({items}) => (
+const BlogList = ({items, like}) => (
   <div>
-    { items.map((item) => <BlogItem {...item} key={item.id} />) }
+    { items.map((item) => <BlogItem {...item} key={item.id} like={like}/>) }
   </div>
 );
 
 BlogItem.propTypes = {
   items: PropTypes.arrayOf(PropTypes.object),
+  like: PropTypes.func.isRequired,
 };
 
 export default BlogList;
-import React from 'react';
-
-const Image = (props) => (
-  <img {...props} />
-);
-
-Image.propTypes = {
-  width: PropTypes.string,
-  height: PropTypes.string,
-  src: PropTypes.string,
-  alt: PropTypes.string
-};
-
-Image.defaultProps = {
-  width: '100px',
-  height: '100px'
-};
-
-export default Image;
