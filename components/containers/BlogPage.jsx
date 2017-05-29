@@ -72,12 +72,11 @@ class BlogPage extends React.Component {
 
   like(item_id) {
     const idx = this.state.items.findIndex((elem) => elem.id === item_id )
-    const item = this.state.items.find((elem) => elem.id === item_id )
     const newState = update(this.state, {
        items: {
         [idx]: {
-                 likes: { $set: item.likes + 1 }
-         }
+          likes: { $apply: (x) => x + 1 }
+        }
       }
     });
     this.setState(newState);
