@@ -1,7 +1,7 @@
 class PieChart extends React.Component {
   componentDidMount() {
     this.chart = c3.generate({
-      bindto: ReactDOM.findDOMNode(this.refs.chart),
+      bindto: this.chart,
       data: {
         columns: this.props.columns ,
         type : 'pie',
@@ -9,19 +9,19 @@ class PieChart extends React.Component {
     });
   }
 
-  componentWillUnmount() {
-    this.chart.destroy();
-  }
-
   componentWillReceiveProps(nextProps) {
-    if (this.props != nextProps) {
+    if (this.props !== nextProps) {
       this.chart.load({ columns: nextProps.columns })
     }
   }
 
+  componentWillUnmount() {
+    this.chart.destroy();
+  }
+
   render() {
     return (
-      <div ref="chart" />
+      <div ref={(c) => { this.chart = c; }} />
     );
   }
 }

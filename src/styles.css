@@ -1,0 +1,8 @@
+@import "~@blueprintjs/core/dist/blueprint.css";
+.pt-button:focus,.pt-button:active {
+   outline: none !important;
+}
+
+h2 {
+  line-height: 1em;
+}

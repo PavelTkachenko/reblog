@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TextBox = (props) => (
+const TextBox = props => (
   <span>{props.children}</span>
 );
 
