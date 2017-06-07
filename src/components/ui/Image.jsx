@@ -10,14 +10,12 @@ const Image = props => (
 );
 
 Image.propTypes = {
-  width: PropTypes.string,
-  height: PropTypes.string,
   src: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
+  alt: PropTypes.string,
 };
 
 Image.defaultProps = {
-  src: 'No alt provided',
+  alt: 'No alt provided',
 };
 
 export default Image;

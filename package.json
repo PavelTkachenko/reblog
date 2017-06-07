@@ -9,7 +9,6 @@
   "dependencies": {
     "@blueprintjs/core": "^1.18.0",
     "babel-register": "^6.24.1",
-    "c3": "^0.4.12",
     "immutability-helper": "^2.2.2",
     "moment": "^2.18.1",
     "prop-types": "^15.5.10",
@@ -21,6 +20,7 @@
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.1",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.4",

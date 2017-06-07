@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Image from './Image';
 import MetaBlock from './MetaBlock';
-import MarginBlock from './MarginBlock'
+import MarginBlock from './MarginBlock';
 import Like from './Like';
 
 const style = {
@@ -28,10 +28,10 @@ const BlogItem = ({ id, text, image, meta, like, likes }) => (
 );
 
 BlogItem.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   text: PropTypes.string,
-  image: Image.propTypes.isRequired,
-  meta: MetaBlock.propTypes.isRequired,
+  image: PropTypes.shape(Image.proptypes),
+  meta: PropTypes.shape(MetaBlock.proptypes).isRequired,
   like: PropTypes.func.isRequired,
   likes: PropTypes.number,
 };

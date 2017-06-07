@@ -1,8 +1,9 @@
+/* eslint-env browser */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles.css';
-
 import { AppContainer } from 'react-hot-loader';
+
+import './styles.css';
 // AppContainer is a necessary wrapper component for HMR
 
 import App from './App';
@@ -12,7 +13,7 @@ const render = (Component) => {
     <AppContainer>
       <Component />
     </AppContainer>,
-    document.getElementById('root')
+    document.getElementById('root'),
   );
 };
 

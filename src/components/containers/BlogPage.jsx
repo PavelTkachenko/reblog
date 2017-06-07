@@ -10,26 +10,25 @@ class BlogPage extends React.Component {
     this.like = this.like.bind(this);
   }
 
-  render() {
-    const { items } = this.state
-    return(
-      <div>
-        <BlogList items={ items } like={this.like} />
-        {/* <PieChart columns={[ ...items.map( item => [item.text,item.likes]) ]} /> */}
-      </div>
-    )
-  };
-
-  like(item_id) {
-    const idx = this.state.items.findIndex((elem) => elem.id === item_id )
+  like(itemId) {
+    const idx = this.state.items.findIndex(elem => elem.id === itemId);
     const newState = update(this.state, {
-       items: {
+      items: {
         [idx]: {
-          likes: { $apply: (x) => x + 1 }
-        }
-      }
+          likes: { $apply: x => x + 1 },
+        },
+      },
     });
     this.setState(newState);
+  }
+
+  render() {
+    return (
+      <div>
+        <BlogList items={this.state.items} like={this.like} />
+        {/* <PieChart columns={[ ...items.map( item => [item.text,item.likes]) ]} /> */}
+      </div>
+    );
   }
 }
 
