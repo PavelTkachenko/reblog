@@ -1,3 +1,7 @@
 {
-  "presets": ["latest", "react"]
+  "presets": [
+    "react",
+    [ "env", { "modules": false } ]
+  ],
+  "plugins": ["react-hot-loader/babel"]
 }
