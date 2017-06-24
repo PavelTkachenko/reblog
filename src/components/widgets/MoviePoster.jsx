@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IMAGE_STORE_PATH } from '../../constants/conf';
-import Image from '../ui/Image';
-import DataBlock from '../ui/DataBlock';
-import Link from '../ui/Link';
+import { IMAGE_STORE_PATH } from 'constants/conf';
+import Image from 'components/ui/Image';
+import DataBlock from 'components/ui/DataBlock';
+import Link from 'components/ui/Link';
 
 const MoviePoster = ({ id, poster, title, year, origin }) => (
   <div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from './Link';
 import Image from './Image';
-import { IMAGE_STORE_PATH } from '../../constants/conf';
+import { IMAGE_STORE_PATH } from 'constants/conf';
 
 const ReviewPreview = ({ id, title, preview, image }) => (
   <div style={{ overflow: 'hidden', marginBottom: '20px' }}>
