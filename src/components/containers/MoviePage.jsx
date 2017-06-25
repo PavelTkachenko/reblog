@@ -7,19 +7,19 @@ import WithLoading from 'components/hoc/WithLoading';
 class MoviePage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isLoading: true };
+    this.state = { data: null };
   }
 
   componentDidMount() {
     axios.get(`${API_PATH}/movies/${this.props.id}`)
       .then((res) => {
         const data = res.data;
-        this.setState({ isLoading: false, movie: data.movie });
+        this.setState({ data: data.movie });
       });
   }
 
   render() {
-    return <MovieShow {...this.props} movie={this.state.movie} />;
+    return <MovieShow {...this.props} movie={this.state.data} />;
   }
 }
 

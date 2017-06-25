@@ -7,19 +7,19 @@ import WithLoading from 'components/hoc/WithLoading';
 class ReviewsPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isLoading: true };
+    this.state = { data: null };
   }
 
   componentDidMount() {
     axios.get(`${API_PATH}/reviews`)
       .then((res) => {
         const data = res.data;
-        this.setState({ isLoading: false, reviews: data.reviews });
+        this.setState({ data: data.reviews });
       });
   }
 
   render() {
-    return <Index {...this.props} reviews={this.state.reviews} />;
+    return <Index {...this.props} reviews={this.state.data} />;
   }
 }
 
