@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import WithReviewsData from 'components/fetchers/WithReviewsData';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import ReviewList from 'components/ui/ReviewList';
 
@@ -19,4 +18,4 @@ Index.propTypes = {
   reviews: PropTypes.array.isRequired,
 };
 
-export default WithReviewsData(Index);
+export default Index;

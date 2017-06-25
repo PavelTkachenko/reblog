@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import WithMovieData from 'components/fetchers/WithMovieData';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import MoviePoster from 'components/widgets/MoviePoster';
 import PageHeader from 'components/ui/PageHeader';
@@ -29,4 +28,4 @@ MovieShow.propTypes = {
   movie: PropTypes.object.isRequired,
 };
 
-export default WithMovieData(MovieShow);
+export default MovieShow;

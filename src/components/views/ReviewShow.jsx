@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import WithReviewData from 'components/fetchers/WithReviewData';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import MoviePoster from 'components/widgets/MoviePoster';
 import PageHeader from '../ui/PageHeader';
@@ -24,4 +23,4 @@ ReviewShow.propTypes = {
   review: PropTypes.object.isRequired,
 };
 
-export default WithReviewData(ReviewShow);
+export default ReviewShow;
