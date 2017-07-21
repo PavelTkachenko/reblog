@@ -2,11 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Image = props => (
-  <img
-    style={{ width: '100%' }}
-    src={props.src}
-    alt={props.alt}
-  />
+  <img {...props} />
 );
 
 Image.propTypes = {

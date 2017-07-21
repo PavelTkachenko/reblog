@@ -28,6 +28,7 @@ module.exports = {
 
   devServer: {
     hot: true,
+    historyApiFallback: true,
 
     contentBase: resolve(__dirname, 'dist'),
 
@@ -74,7 +75,7 @@ module.exports = {
     extensions: [".js", ".jsx"],
     modules: [
       "node_modules",
-      './src',
+      path.resolve(__dirname, "src"),
       path.resolve(__dirname, "dist")
     ]
   },
